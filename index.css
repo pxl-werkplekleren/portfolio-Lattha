@@ -1,0 +1,12 @@
+h1{
+    font-weight: 700;
+    text-align:center;
+    line-height: 1.2;
+    letter-spacing: -2px;
+    font-size: 48px;
+    font-family: 'Poppins',sans-serif;
+    color: #212529;
+}
+header #titel{
+    text-align:center;
+}
