@@ -281,14 +281,66 @@ body {
     color:#b5b5b5;
     line-height:1.7;
     margin:.4rem 0;
-    padding-left: 1rem; /* ruimte links voor je "eigen bullet" */
+    padding-left: 1rem; /* ruimte links voor puntje*/
     position: relative; /* zodat ::before op de juiste plek komt */
 }
 
-/* eigen bullet: goud puntje links */
+/* gouden puntje */
 .job-bullets li::before {
-    content: "•";        /* de bullet */
-    color: #d4b35a;       /* goud */
+    content: "•";        /* puntje */
+    color: #d4b35a;
     position: absolute;   /* los positioneren */
     left: 0;              /* helemaal links in de li */
+}
+
+/*Contact me*/
+.contact {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 4rem 2rem;
+}
+
+.address {
+    margin-top: 1rem;
+    color: #b5b5b5;
+    line-height: 1.8;
+    padding-left: 1.2rem;
+}
+
+/*Footer*/
+.footer {
+    border-top: 1px solid #FFFFFF14;
+    padding: 1.2rem 0;
+    margin-top: 4rem;
+}
+
+.footer-container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 2rem;
+    display: grid;
+    grid-template-columns: 1fr auto 1fr;
+    align-items: center;
+    gap: 1rem;
+}
+
+.footer-left {
+    color:#a7a7a7;
+}
+
+.footer-center {
+    color:#b5b5b5;
+    text-align:center;
+}
+
+.footer-right{
+    justify-self: end;
+    display: flex;
+    gap: 2rem;
+}
+
+.footer-icon {
+    width: 30px;
+    height: 30px;
+    display: block;
 }
