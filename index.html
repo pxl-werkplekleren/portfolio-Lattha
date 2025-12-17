@@ -1,37 +1,245 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="nl">
 <head>
     <meta charset="UTF-8">
-    <title>My Portfolio</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="index.css">
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+    <title>Curriculum vitae</title>
+    <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-<header>
-    <!-- Navigation bar-->
-    <nav>
+<div class="container">
 
-    </nav>
+    <!-- HEADER + NAVIGATIE -->
 
-    <!-- Titel section-->
-    <section>
-        <h1>Latthakone Pathavong</h1>
-        <p id="titel">Student Graduaat Programmeren</p>
-    </section>
-</header>
+    <header class="site-header">
+        <div class="header-container">
+            <h1 class="logo">L<span class ="gold">p</span></h1>
+            <nav class="navbar">
+                <ul>
+                    <li><a href="#about"> About me</a></li>
+                    <li><a href="#opleiding">Opleiding</a></li>
+                    <li><a href="#skills">Skills</a></li>
+                    <li><a href="#ervaring">Ervaring</a></li>
+                    <li><a href="#contact">Contact me</a></li>
+                </ul>
+            </nav>
+        </div>
 
-<main>
-    <!-- About me-->
-    <h2>About Me</h2>
-    <p>Ik ben Latthakone Pathavong, student Graduaat Programmeren aan Hogeschool PXL.
-        Na meer dan twintig jaar in de CNC-wereld koos ik bewust voor een nieuwe uitdaging:
-        softwareontwikkeling. Ik hou ervan om problemen op te lossen, ideeën uit te testen en iets te bouwen dat écht werkt.</p>
-    <p>In mijn portfolio toon ik hoe ik stap voor stap groei als developer. Je vindt er mijn opdrachten in C# en
-        webontwikkeling, maar ook mijn reflecties, werkwijze en persoonlijke leerdoelen. Mijn technische
-        achtergrond, nauwkeurigheid en doorzettingsvermogen neem ik mee in alles wat ik maak.</p>
-    <p>Dit portfolio laat vooral zien wie ik ben: iemand die graag leert en met veel
-        motivatie bouwt aan een toekomst in IT.</p>
-</main>
+        <!-- HERO SECTION -->
+
+        <section class="hero">
+            <div class="hero-img">
+                <a href="https://www.linkedin.com/in/latthakone-pathavong-a08b82396/" target="_blank">
+                    <img src="images/Ik.png" alt="LinkedIn profiel van Latthakone" class="my-image"></a>
+            </div>
+
+            <div class="hero-container">
+                <h2 class="hero-firstname">Latthakone</h2>
+                <h1 class="hero-lastname">Pathavong</h1>
+                <p class="hero-subtitle">I'm a Junior dev in training</p>
+            </div>
+        </section>
+    </header>
+
+    <main>
+
+        <!-- ABOUT ME SECTION -->
+        <section id="about" class="section">
+            <h2 class="about-title">About me</h2>
+            <p class="about">Ik ben student Graduaat Programmeren aan Hogeschool PXL, met een sterke interesse in zowel
+                front-end als back-end ontwikkeling. Ik haal veel voldoening uit het analyseren van problemen
+                en het creëren van slimme, efficiënte oplossingen.</p>
+            <p class="about">  Voor mijn opleiding heb ik meer dan 20 jaar ervaring opgebouwd als CNC-operator / insteller / programmer.
+                Ik heb uitgebreide kennis van het programmeren van CNC-machines en heb precisie-onderdelen geproduceerd,
+                waaronder componenten voor tandwielkasten van windmolens. Deze achtergrond heeft mij een sterke technische
+                basis, nauwkeurigheid en probleemoplossend vermogen gegeven en vaardigheden die ik nu met passie inzet
+                in softwareontwikkeling.</p>
+        </section>
+
+        <!-- OPLEIDING & TAAl SECTION -->
+        <section id="opleiding" class="edu-lang">
+            <div class="education">
+                <h2>Opleiding</h2>
+
+                <h3 class="edu">Graduaat Programmeren</h3>
+                <p class="edu-p">Hogeschool PXL | heden</p>
+
+                <h3 class="edu">Getuigschrift draaien, frezen en CNC</h3>
+                <p class="edu-p">VDAB | 1998</p>
+
+                <h3 class="edu">Economie Moderne Talen</h3>
+                <p class="edu-p">Sint-Jan Berchmanscollege Mol | 1996</p>
+            </div>
+
+            <div class="lang">
+                <h2>Talenkennis</h2>
+
+                <table class="lang-table">
+                    <thead>
+                    <tr>
+                        <th>Taal</th>
+                        <th>Niveau</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                        <td>Nederlands</td>
+                        <td>Moedertaal</td>
+                    </tr>
+                    <tr>
+                        <td>Engels</td>
+                        <td>Zeer goed</td>
+                    </tr>
+                    <tr>
+                        <td>Duits</td>
+                        <td>Zeer goed</td>
+                    </tr>
+                    <tr>
+                        <td>Thais</td>
+                        <td>Moedertaal</td>
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <!-- SKILLS SECTION -->
+        <section id="skills" class="skills section">
+            <h2 class="section-title">Skills</h2>
+
+            <div class="skills-container">
+                <div class="skill">
+                    <h3>Technische kennis</h3>
+                    <ul>
+                        <li>CNC-draaien en frezen (siemens)</li>
+                        <li>Machine-instellingen: nulpunt, gereedschap instelling en offsets</li>
+                        <li>Werken met technische plannen & toleranties</li>
+                        <li>Meten en controleren</li>
+                        <li>Gereedschapsbeheer: wisselplaten, frezen, snijparameters</li>
+                        <li>Basisonderhoud machine</li>
+                        <li>Materialenkennis en verspaningsparameters</li>
+                        <li>Conventionele draaibank en freesbank</li>
+                        <li>CNC-programmering: G-code</li>
+                        <li>ERP-systemen</li>
+                        <li>Digitale meet- en logsystemen</li>
+                    </ul>
+                </div>
+
+                <div class="skill">
+                    <h3>Computerkennis</h3>
+                    <ul>
+                        <li>C#</li>
+                        <li>HTML, CSS, JavaScript</li>
+                        <li>SQL</li>
+                        <li>Git & GitHub</li>
+                        <li>Visual Studio & Visual Studio Code</li>
+                        <li>Docker</li>
+                        <li>Windows en macOS</li>
+                    </ul>
+                </div>
+
+                <div class="skill">
+                    <h3>Competenties</h3>
+                    <ul>
+                        <li>Oplossingsgericht</li>
+                        <li>Planmatig</li>
+                        <li>Zelfstandig</li>
+                        <li>Leergierig</li>
+                        <li>Team player</li>
+                        <li>Sociaal</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- ERVARING SECTION -->
+        <section id="ervaring" class="experience">
+            <h2 class="section-title">Professionele ervaring</h2>
+
+            <div class="experience-list">
+                <article class="job">
+                    <header class="job-header">
+                        <div>
+                            <h3 class="job-title">CNC draaier – frezer</h3>
+                            <p class="job-company">ZF WindPower Antwerpen</p>
+                        </div>
+                        <p class="job-period">02.2005 – 02.2025</p>
+                    </header>
+
+                    <ul class="job-bullets">
+                        <li>Maken van tandwielkasten voor windmolens</li>
+                        <li>Instellen en omstellen van de machine</li>
+                        <li>Bewaken van het productieproces volgens strikte toleranties</li>
+                        <li>Lezen van technisch plan en CAM-programma's</li>
+                        <li>Gereedschapsbeheer en slijtagecontrole</li>
+                        <li>Kwaliteitscontroles op werkstuk</li>
+                    </ul>
+                </article>
+
+                <article class="job">
+                    <header class="job-header">
+                        <div>
+                            <h3 class="job-title">Draaier – frezer</h3>
+                            <p class="job-company">Smet Boring</p>
+                        </div>
+                        <p class="job-period">10.2000 – 02.2005</p>
+                    </header>
+
+                    <ul class="job-bullets">
+                        <li>Maken en herstellen van werkstukken in onderhoudsafdeling</li>
+                    </ul>
+                </article>
+
+                <article class="job">
+                    <header class="job-header">
+                        <div>
+                            <h3 class="job-title">Kernrealisaties</h3>
+                            <p class="job-company">Projectmedewerking: onderstutten Centraal Station Amsterdam</p>
+                        </div>
+                    </header>
+
+                    <ul class="job-bullets">
+                        <li>Aanpassing programma CNC-draaibank</li>
+                        <li>Vermindering productietijd met 7 min per werkstuk</li>
+                        <li>Veilig, nauwkeurig en planmatig werken</li>
+                        <li>Onderhoud en oplossen van kleine storingen</li>
+                        <li>Efficiënt samenwerken met montage team</li>
+                        <li>Kwaliteitscontrole en probleemoplossing</li>
+                    </ul>
+                </article>
+            </div>
+        </section>
+
+        <!-- CONTACT ME SSECTION -->
+        <section id="contact">
+            <h2>Contact</h2>
+            <p>Vennestraat 58 bus 102</p>
+            <p>2400 Mol</p>
+            <p>BELGIE</p>
+        </section>
+    </main>
+
+    <footer>
+        <!-- FOOTER-->
+        <section>
+            <div>
+                <p>Latthakone Pathavong 1PRO-E</p>
+            </div>
+            <div>
+                <p>Opdracht curriculum vitae</p>
+            </div>
+            <div>
+                <ul class="social-icons-container">
+                    <li><a href="#"><img class="arrowup-icons" src="images/arrow_up.svg" alt="arraow up"></a></li>
+                </ul>
+            </div>
+        </section>
+
+    </footer>
+</div>
 </body>
 </html>

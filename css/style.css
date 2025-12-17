@@ -1,0 +1,294 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background: #2f3032;
+    color: #8f8f8f;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* logo & navbar*/
+.header-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem 0;
+}
+
+.logo {
+    font-size: 2.5rem;
+    margin-left: 2rem;
+}
+
+.gold {
+    font-size: 2rem;
+    font-weight: 550;
+    color: #d4b35a;
+}
+
+.navbar ul {
+    list-style: none;
+    display: flex;
+    gap: 0.5rem;
+    margin-right: 1rem;
+}
+
+.navbar a {
+    color: #8f8f8f;
+    text-decoration: none;
+    font-size: 0.95rem;
+    padding: 0.4rem 0.8rem;
+    border-radius: 4px;
+}
+
+/*Hero section*/
+.hero {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8rem;
+    padding: 4rem 2rem;
+    margin-top: 4rem;
+    margin-bottom: 12rem;
+    min-height: 70vh;
+}
+
+.hero-container {
+    text-align: left;
+    margin: 0;
+    max-width: 520px;
+}
+
+.my-image {
+    max-width: 260px;
+    width: 100%;
+    height: auto;
+    border-radius: 50%;
+}
+
+.my-image:hover {
+    box-shadow: 10px 12px 12px #000000;
+}
+
+.hero-firstname {
+    font-weight: 300;
+    font-size: 3rem;
+    line-height: 1;
+    color: #a7a7a7;
+    margin: 0;
+}
+
+.hero-lastname {
+    font-family: "Bebas Neue", sans-serif;
+    font-size: 8rem;
+    margin: 0.2rem 0 1rem;
+    color: #d4b35a;
+    text-transform: uppercase;
+}
+
+.hero-subtitle {
+    color: #b5b5b5;
+    font-size: 1.2rem;
+    margin: 0;
+}
+
+/*About me section*/
+.section {
+    padding: 4rem 2rem;
+    max-width: 900px;
+    margin: 0 auto;
+
+}
+
+.about-title {
+    color: #d4b35a;
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
+
+.about {
+    color: #b5b5b5;
+    line-height: 1.9;
+    font-size: 1.1rem;
+    margin-bottom: 1.2rem;
+}
+
+/*Opleiding & taal*/
+.edu-lang {
+    padding: 4rem 2rem;
+    max-width: 1000px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 3rem;
+    align-items: start;
+}
+
+.edu-lang h2 {
+    color: #d4b35a;
+    font-size: 3rem;
+    margin: 0 0 1rem 0;
+}
+
+.edu {
+    color: #a7a7a7;
+    margin-top: 1rem;
+    margin-bottom: 0.25rem;
+}
+
+.edu-p {
+    color: #b5b5b5;
+    margin: 0 0 1rem 0;
+}
+
+.lang-table {
+    width: 100%;
+    border-collapse: collapse;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.lang-table th, .lang-table td {
+    padding: 0.3rem 0.3rem;
+    text-align: left;
+}
+
+.lang-table thead th {
+    background: #D4B35A1F;
+    color: #a7a7a7;
+    font-weight: 700;
+}
+
+.lang-table tbody tr:nth-child(even){
+    background: #FFFFFF14;
+}
+
+.lang-table tbody tr:nth-child(odd){
+    background:  #FFFFFF0A;
+}
+
+.lang-table tbody td{
+    color: #b5b5b5;
+}
+
+/*Skills*/
+.section-title {
+    color: #d4b35a;
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
+
+.skills {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 2rem 2rem;
+}
+
+.skills-container {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr)); /* 3 gelijke kolommen */
+    gap: 1.5rem;
+}
+
+.skill {
+    background: #FFFFFF0A;
+    border: 1px solid #FFFFFF14;
+    border-radius: 12px;
+    padding: 1rem;
+    width: auto;
+}
+
+.skill h3 {
+    color:#a7a7a7;
+    font-size:1.2rem;
+    margin-bottom:1rem;
+}
+
+.skill ul {
+    list-style:none;
+    padding:0;
+    margin:0;
+}
+
+.skill li {
+    color:#b5b5b5;
+    line-height:1.7;
+    margin: 0.45rem 0;
+    padding-left: 1.1rem;
+}
+
+/*Ervaring*/
+.experience {
+    max-width:1100px;
+    margin:0 auto;
+    padding:4rem 2rem;
+}
+
+.experience-list {
+    display:grid;
+    gap:2rem;
+}
+
+.job {
+    padding-bottom:1rem;
+    border-bottom:1px solid #FFFFFF14;
+}
+.job:last-child {
+    border-bottom:0;
+    padding-bottom:0;
+}
+
+.job-header {
+    display:flex;
+    justify-content:space-between;
+    align-items:baseline;
+    gap:1rem;
+    margin-bottom:.8rem;
+}
+
+.job-title {
+    color: #a7a7a7;
+    font-size:1.3rem;
+    margin:0;
+}
+
+.job-company {
+    color: #b5b5b5;
+    margin: 0.25rem 0 0;
+}
+
+.job-period {
+    color:#d4b35a;
+    font-weight:700;
+    margin:0;
+}
+
+.job-bullets {
+    list-style:none;
+    margin:0;
+    padding:0;
+}
+
+.job-bullets li {
+    color:#b5b5b5;
+    line-height:1.7;
+    margin:.4rem 0;
+    padding-left: 1rem; /* ruimte links voor je "eigen bullet" */
+    position: relative; /* zodat ::before op de juiste plek komt */
+}
+
+/* eigen bullet: goud puntje links */
+.job-bullets li::before {
+    content: "•";        /* de bullet */
+    color: #d4b35a;       /* goud */
+    position: absolute;   /* los positioneren */
+    left: 0;              /* helemaal links in de li */
+}
