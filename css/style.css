@@ -44,9 +44,15 @@ body {
 .navbar a {
     color: #8f8f8f;
     text-decoration: none;
-    font-size: 0.95rem;
-    padding: 0.4rem 0.8rem;
+    font-size: 1rem;
+    padding: 0 0.8rem;
     border-radius: 4px;
+    letter-spacing: 0.03rem;
+}
+
+.navbar a:hover {
+    color: #b5b5b5;
+    text-shadow: 0 1px 3px #d4b35a;
 }
 
 /*Hero section*/
@@ -103,9 +109,8 @@ body {
 /*About me section*/
 .section {
     padding: 4rem 2rem;
-    max-width: 900px;
+    max-width: 1000px;
     margin: 0 auto;
-
 }
 
 .about-title {
@@ -116,7 +121,7 @@ body {
 
 .about {
     color: #b5b5b5;
-    line-height: 1.9;
+    line-height: 1.65;
     font-size: 1.1rem;
     margin-bottom: 1.2rem;
 }
@@ -204,6 +209,7 @@ body {
     border-radius: 12px;
     padding: 1rem;
     width: auto;
+    box-shadow: 0 6px 12px #232121;
 }
 
 .skill h3 {
@@ -256,7 +262,7 @@ body {
 
 .job-title {
     color: #a7a7a7;
-    font-size:1.3rem;
+    font-size:1.2rem;
     margin:0;
 }
 
@@ -343,4 +349,111 @@ body {
     width: 30px;
     height: 30px;
     display: block;
+}
+
+/* default: desktop -> tabel zichtbaar, mobile variant verborgen */
+.lang-mobile {
+    display: none;
+}
+
+/* MOBIEL: < 576px -> tabel weg, mobile variant aan */
+@media (max-width: 576px) {
+    .lang-table {
+        display: none;
+    }
+    .lang-mobile {
+        display: grid; gap: 0.75rem;
+    }
+
+    .lang-item {
+        display: flex;
+        justify-content: space-between;
+        gap: 1rem;
+        padding: 0.7rem 0.9rem;
+        border: 1px solid #FFFFFF14;
+        background: #FFFFFF0A;
+        border-radius: 10px;
+    }
+
+    .lang-name {
+        color: #a7a7a7;
+        font-weight: 600;
+    }
+    .lang-level {
+        color: #b5b5b5;
+    }
+
+    .section,
+    .skills,
+    .experience,
+    .contact,
+    .edu-lang{
+        padding: 2.5rem 1.25rem;
+    }
+
+    .header-container{
+        flex-direction: column;
+        gap: 0.75rem;
+        padding: 1rem 1.25rem;
+        align-items: center;
+    }
+
+    .my-image{
+        max-width: 240px;
+    }
+
+    .hero-firstname{
+        font-size: 2.1rem;
+    }
+    .hero-lastname{
+        font-size: 4.5rem;
+    }
+    .hero-subtitle{
+        font-size: 1rem;
+    }
+
+    /* TITELS kleiner */
+    .about-title,
+    .section-title,
+    .edu-lang h2{
+        font-size: 2.1rem;
+    }
+
+    /* OPLEIDING + TAAL: 1 kolom */
+    .edu-lang{
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+
+    /* SKILLS: 1 kolom */
+    .skills-container{
+        grid-template-columns: 1fr;
+    }
+
+    /* ERVARING: header stapelen */
+    .job-header{
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0.3rem;
+    }
+
+    /* FOOTER: onder elkaar */
+    .footer-container{
+        grid-template-columns: 1fr;
+        gap: 0.75rem;
+        text-align: center;
+    }
+
+    .footer-right{
+        justify-self: center;
+        justify-content: center;
+        gap: 1rem;
+    }
+
+}
+
+/* DESKTOP: >= 992px -> tabel terug, mobile variant weg */
+@media (min-width: 992px) {
+    .lang-table { display: table; }
+    .lang-mobile { display: none; }
 }
