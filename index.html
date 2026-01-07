@@ -1,267 +1,521 @@
 <!DOCTYPE html>
-<html lang="nl">
+<html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
-    <title>Curriculum vitae</title>
-    <link rel="stylesheet" href="css/style.css">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100..900&family=Orbitron:wght@400..900&family=Space+Grotesk:wght@300..700&display=swap" rel="stylesheet" />
+    <title>Portfolio</title>
+    <link rel="stylesheet" href="style.css" />
 </head>
+
 <body>
-<div class="container">
+<header>
+    <a class="home" href="#home" aria-label="Ga naar boven">↑</a>
+    <div class="container">
+        <nav>
+            <ul class="navbar-list">
+                <li><a href="#about">ABOUT ME</a></li>
+                <li><a href="#logboek">LOGBOEK</a></li>
+                <li><a href="#ontwikkeling">ONTWIKKELING</a></li>
+                <li><a href="#contact">CONTACT</a></li>
+            </ul>
+        </nav>
+    </div>
+</header>
 
-    <!-- HEADER + NAVIGATIE -->
-
-    <header class="site-header">
-        <div class="header-container">
-            <h1 class="logo">L<span class ="gold">p</span></h1>
-            <nav class="navbar">
-                <ul>
-                    <li><a href="#about"> About me</a></li>
-                    <li><a href="#opleiding">Opleiding</a></li>
-                    <li><a href="#skills">Skills</a></li>
-                    <li><a href="#ervaring">Ervaring</a></li>
-                    <li><a href="#contact">Contact</a></li>
-                </ul>
-            </nav>
-        </div>
-
-        <!-- HERO SECTION -->
-
-        <section class="hero">
-            <div class="hero-img">
-                <a href="https://www.linkedin.com/in/latthakone-pathavong-a08b82396/" target="_blank">
-                    <img src="images/Ik.png" alt="LinkedIn profiel van Latthakone" class="my-image"></a>
-            </div>
-
-            <div class="hero-container">
-                <h2 class="hero-firstname">Latthakone</h2>
+<!-- HERO SECTION -->
+<section id="home" class="hero">
+    <div class="container">
+        <div class="hero-text">
+            <div class="hero-title">
+                <h1 class="hero-firstname">Latthakone</h1>
                 <h1 class="hero-lastname">Pathavong</h1>
-                <p class="hero-subtitle">I'm a Junior dev in training</p>
             </div>
-        </section>
-    </header>
 
-    <main>
+            <p class="hero-subtitle">
+                I’m a Junior dev in training, interested in creating websites.
+            </p>
+        </div>
+    </div>
+</section>
 
-        <!-- ABOUT ME SECTION -->
-        <section id="about" class="section">
-            <h2 class="about-title">About me</h2>
-            <p class="about">Ik ben student Graduaat Programmeren aan Hogeschool PXL, met een sterke interesse in zowel
+<!-- ABOUT SECTION -->
+<section id="about" class="section">
+    <div class="container">
+        <h2 class="section-title">About me</h2>
+
+        <div class="about-cards">
+            <p class="about-top">
+                Ik ben student Graduaat Programmeren aan Hogeschool PXL, met een sterke interesse in zowel
                 front-end als back-end ontwikkeling. Ik haal veel voldoening uit het analyseren van problemen
-                en het creëren van slimme, efficiënte oplossingen.</p>
-            <p class="about">  Voor mijn opleiding heb ik meer dan 20 jaar ervaring opgebouwd als CNC-operator / insteller / programmer.
+                en het creëren van slimme, efficiënte oplossingen.
+            </p>
+
+            <p class="about">
+                Voor mijn opleiding heb ik meer dan 20 jaar ervaring opgebouwd als CNC-operator / insteller / programmer.
                 Ik heb uitgebreide kennis van het programmeren van CNC-machines en heb precisie-onderdelen geproduceerd,
                 waaronder componenten voor tandwielkasten van windmolens. Deze achtergrond heeft mij een sterke technische
                 basis, nauwkeurigheid en probleemoplossend vermogen gegeven en vaardigheden die ik nu met passie inzet
-                in softwareontwikkeling.</p>
-        </section>
+                in softwareontwikkeling.
+            </p>
+        </div>
+    </div>
+</section>
 
-        <!-- OPLEIDING & TAAl SECTION -->
-        <section id="opleiding" class="edu-lang">
-            <div class="education">
-                <h2>Opleiding</h2>
+<!-- LOGBOEK SECTION -->
+<section id="logboek" class="section">
+    <div class="container">
+        <h2 class="section-title">Logboek</h2>
 
-                <h3 class="edu">Graduaat Programmeren</h3>
-                <p class="edu-p">Hogeschool PXL | heden</p>
+        <div class="table-wrap">
+            <table class="logboek-table">
+                <thead>
+                <tr>
+                    <th>Week</th>
+                    <th>Periode</th>
+                    <th>Inhoud</th>
+                    <th>Evaluaties</th>
+                    <th>Opdrachten</th>
+                </tr>
+                </thead>
 
-                <h3 class="edu">Getuigschrift draaien, frezen en CNC</h3>
-                <p class="edu-p">VDAB | 1998</p>
+                <tbody>
+                <tr>
+                    <td class="cell-week">1</td>
+                    <td>22/09 - 26/09</td>
+                    <td>
+                        <ul>
+                            <li>Introductie werkplekleren</li>
+                            <li>Wat is programmeren</li>
+                            <li>Introductie POP, X-Factor &amp; SDG’s</li>
+                            <li>Introductie Scratch</li>
+                        </ul>
+                    </td>
+                    <td></td>
+                    <td></td>
+                </tr>
 
-                <h3 class="edu">Economie Moderne Talen</h3>
-                <p class="edu-p">Sint-Jan Berchmanscollege Mol | 1996</p>
+                <tr>
+                    <td class="cell-week">2</td>
+                    <td>29/09 - 03/10</td>
+                    <td>
+                        <ul>
+                            <li>Oriënteringstraject</li>
+                            <li>Installatie Git &amp; GitHub</li>
+                            <li>Introductie Git &amp; GitHub</li>
+                        </ul>
+                    </td>
+                    <td>
+                        <ul>
+                            <li>LockDownBrowser</li>
+                        </ul>
+                    </td>
+                    <td></td>
+                </tr>
+
+                <tr>
+                    <td class="cell-week">3</td>
+                    <td>06/10 - 10/10</td>
+                    <td>
+                        <ul>
+                            <li>POP motivatie, kernkwadranten en reflecteren</li>
+                        </ul>
+                    </td>
+                    <td></td>
+                    <td>
+                        <ul>
+                            <li>Scratch</li>
+                        </ul>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="cell-week">4</td>
+                    <td>13/10 - 17/10</td>
+                    <td>
+                        <ul>
+                            <li>POP planning &amp; studieaanpak *</li>
+                        </ul>
+                    </td>
+                    <td>
+                        <ul>
+                            <li>Git &amp; GitHub</li>
+                        </ul>
+                    </td>
+                    <td>
+                        <ul>
+                            <li>Reflecteren</li>
+                        </ul>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="cell-week">5</td>
+                    <td>20/10 - 24/10</td>
+                    <td>
+                        <ul>
+                            <li>Gastsprekers</li>
+                            <li>EPOS reflectie van oriënteringstraject</li>
+                        </ul>
+                    </td>
+                    <td>
+                        <ul>
+                            <li>Gastsprekers</li>
+                        </ul>
+                    </td>
+                    <td>
+                        <ul>
+                            <li>Planning</li>
+                        </ul>
+                    </td>
+                </tr>
+
+                <tr class="row-break">
+                    <td colspan="5">Herfstvakantie</td>
+                </tr>
+
+                <tr>
+                    <td class="cell-week">6</td>
+                    <td>03/11 - 07/11</td>
+                    <td>
+                        <ul>
+                            <li>POP leren analyseren</li>
+                        </ul>
+                    </td>
+                    <td></td>
+                    <td></td>
+                </tr>
+
+                <tr>
+                    <td class="cell-week">7</td>
+                    <td>10/11 - 14/11</td>
+                    <td>
+                        <ul>
+                            <li>POP carrièrekompas</li>
+                            <li>Feedback evaluatie</li>
+                        </ul>
+                    </td>
+                    <td>
+                        <ul>
+                            <li>C# Console</li>
+                        </ul>
+                    </td>
+                    <td>
+                        <ul>
+                            <li>POP carrièrekompas</li>
+                        </ul>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="cell-week">8</td>
+                    <td>17/11 - 21/11</td>
+                    <td>
+                        <ul>
+                            <li>POP personal branding</li>
+                            <li>Introductie curriculum vitae</li>
+                            <li>Introductie portfolio</li>
+                        </ul>
+                    </td>
+                    <td></td>
+                    <td>
+                        <ul>
+                            <li>Feedback evaluatie C# Console</li>
+                        </ul>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="cell-week">9</td>
+                    <td>24/11 - 28/11</td>
+                    <td>
+                        <ul>
+                            <li>Instroombevraging</li>
+                            <li>Feedback evaluatie</li>
+                        </ul>
+                    </td>
+                    <td>
+                        <ul>
+                            <li>HTML &amp; CSS</li>
+                        </ul>
+                    </td>
+                    <td></td>
+                </tr>
+
+                <tr>
+                    <td class="cell-week">10</td>
+                    <td>01/12 - 05/12</td>
+                    <td>
+                        <ul>
+                            <li>Documenteren en debuggen in C#</li>
+                            <li>Labo: Debugging (C#)</li>
+                        </ul>
+                    </td>
+                    <td>
+                        <ul>
+                            <li>Debugging (idem aan labo)</li>
+                        </ul>
+                    </td>
+                    <td>
+                        <ul>
+                            <li>Feedback evaluatie debugging</li>
+                        </ul>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="cell-week">11</td>
+                    <td>08/12 - 12/12</td>
+                    <td>
+                        <ul>
+                            <li>Labo: WPF</li>
+                            <li>Gastsprekers</li>
+                        </ul>
+                    </td>
+                    <td>
+                        <ul>
+                            <li>SDG’s</li>
+                        </ul>
+                    </td>
+                    <td></td>
+                </tr>
+
+                <tr>
+                    <td class="cell-week">12</td>
+                    <td>15/12 - 19/12</td>
+                    <td>
+                        <ul>
+                            <li>POP kernkwadranten</li>
+                            <li>Afwerken curriculum vitae</li>
+                            <li>Afwerken labo WPF</li>
+                        </ul>
+                    </td>
+                    <td></td>
+                    <td>
+                        <ul>
+                            <li>Curriculum Vitae</li>
+                        </ul>
+                    </td>
+                </tr>
+
+                <tr class="row-break">
+                    <td colspan="5">Kerstvakantie</td>
+                </tr>
+
+                <tr>
+                    <td class="cell-week">13</td>
+                    <td>05/01 - 09/01</td>
+                    <td>
+                        <ul>
+                            <li>Infosessie Thalento</li>
+                        </ul>
+                    </td>
+                    <td>
+                        <ul>
+                            <li>C# WPF</li>
+                        </ul>
+                    </td>
+                    <td>
+                        <ul>
+                            <li>Portfolio</li>
+                        </ul>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="cell-week">14</td>
+                    <td>12/01 - 16/01</td>
+                    <td>
+                        <ul>
+                            <li>Introductie Corda</li>
+                            <li>Feedback evaluatie C# WPF</li>
+                        </ul>
+                    </td>
+                    <td>
+                        <ul>
+                            <li><em>Inhaalmoment</em></li>
+                        </ul>
+                    </td>
+                    <td></td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</section>
+
+<!-- ONTWIKKELING SECTION -->
+<section id="ontwikkeling" class="section">
+    <div class="container">
+        <h2 class="section-title">Ontwikkeling</h2>
+
+        <div class="dev-block">
+            <h3 class="dev-subtitle">Mijn keuze voor deze opleiding</h3>
+
+            <div class="qa-grid">
+                <div class="qa-card">
+                    <h4 class="qa-title">Waarom kies je voor de opleiding programmeren?</h4>
+                    <p class="qa-text">Ik kies voor de opleiding programmeren omdat ik een nieuwe uitdaging zoek en mezelf wil
+                        omscholen naar een job met toekomst. Ik wil leren hoe je websites echt bouwt, van structuur tot design en
+                        functionaliteit. Later wil ik een kleine zaak starten waarmee ik websites maak voor mensen die dat nodig
+                        hebben. Zo kan ik iets praktisch creëren dat anderen helpt en waar ik trots op kan zijn.></p>
+                </div>
+
+                <div class="qa-card">
+                    <h4 class="qa-title">Waarom denk je dat dit beroep bij jou past?</h4>
+                    <p class="qa-text">Ik denk dat dit beroep bij mij past omdat ik altijd al heb willen ondernemen en graag zelf
+                        iets opbouw. Ik ben ook perfectionistisch in de positieve zin: ik let op details en wil dat iets niet alleen
+                        mooi is, maar ook echt goed werkt. Ik vind het leuk om iets te maken van nul, stap voor stap, en daarna het
+                        resultaat te zien. Programmeren combineert logisch nadenken met creativiteit: je lost problemen op én je
+                        bouwt iets dat mensen kunnen gebruiken. Daarom past dit goed bij mijn manier van werken en mijn doelen.</p>
+                </div>
             </div>
+        </div>
 
-            <!--  DESKTOP TABLE -->
-            <div class="lang">
-                <h2>Talenkennis</h2>
+        <div class="dev-block">
+            <h3 class="dev-subtitle">Competenties programmeur</h3>
 
-                <table class="lang-table">
+            <div class="table-wrap">
+                <table class="olr-table">
                     <thead>
                     <tr>
-                        <th>Taal</th>
-                        <th>Niveau</th>
+                        <th>Rol</th>
+                        <th>OLR</th>
+                        <th>Omschrijving</th>
                     </tr>
                     </thead>
+
                     <tbody>
-                    <tr>
-                        <td>Nederlands</td>
-                        <td>Moedertaal</td>
+                    <tr class="row-break">
+                        <td colspan="3">Rol: Ontwerper</td>
                     </tr>
                     <tr>
-                        <td>Engels</td>
-                        <td>Zeer goed</td>
+                        <td>Ontwerper</td>
+                        <td class="cell-olr">OLR1</td>
+                        <td>De gegradueerde bereidt de realisatie van een softwareproject voor.</td>
                     </tr>
                     <tr>
-                        <td>Duits</td>
-                        <td>Zeer goed</td>
+                        <td>Ontwerper</td>
+                        <td class="cell-olr">OLR2</td>
+                        <td>
+                            De gegradueerde maakt op basis van de analyse een onderbouwd voorstel voor:
+                            <ul>
+                                <li>het ontwerp,</li>
+                                <li>de programmeertaal en</li>
+                                <li>de methodiek.</li>
+                            </ul>
+                            De gegradueerde stemt het voorstel af met de softwareontwikkelaar, analist en/of projectleider.
+                        </td>
+                    </tr>
+
+                    <tr class="row-break">
+                        <td colspan="3">Rol: Programmeur</td>
                     </tr>
                     <tr>
-                        <td>Thais</td>
-                        <td>Moedertaal</td>
+                        <td>Programmeur</td>
+                        <td class="cell-olr">OLR3</td>
+                        <td>De gegradueerde realiseert softwareapplicaties en gegevensstructuren. De gegradueerde werkt hierbij planmatig binnen de context van het projectplan, de beschikbare tools en de vooropgestelde methodiek.</td>
+                    </tr>
+                    <tr>
+                        <td>Programmeur</td>
+                        <td class="cell-olr">OLR4</td>
+                        <td>De gegradueerde is medeverantwoordelijk voor de eigen digitale werkomgeving en draagt bij tot de gedeelde infrastructuur die nodig is voor het ontwikkelen, testen en in productie brengen van projecten.</td>
+                    </tr>
+                    <tr>
+                        <td>Programmeur</td>
+                        <td class="cell-olr">OLR5</td>
+                        <td>De gegradueerde programmeert softwaretoepassingen volgens de standaarden en afspraken binnen de organisatie.</td>
+                    </tr>
+                    <tr>
+                        <td>Programmeur</td>
+                        <td class="cell-olr">OLR6</td>
+                        <td>De gegradueerde gaat in overleg met de softwareontwikkelaar, analist en/of projectleider na of het opgeleverde product onderhoud en/of aanpassingen nodig heeft. De gegradueerde voert het onderhoud en de aanpassingen projectmatig uit, rekening houdend met eerder gemaakte afspraken.</td>
+                    </tr>
+
+                    <tr class="row-break">
+                        <td colspan="3">Rol: Tester</td>
+                    </tr>
+                    <tr>
+                        <td>Tester</td>
+                        <td class="cell-olr">OLR7</td>
+                        <td>De gegradueerde gaat volgens testscenario’s de werking en functionaliteit van de gerealiseerde code na en verbetert deze op basis van feedback van de softwareontwikkelaar, analist, projectleider en/of gebruikers.</td>
+                    </tr>
+
+                    <tr class="row-break">
+                        <td colspan="3">Rol: Communicator / Teamspeler</td>
+                    </tr>
+                    <tr>
+                        <td>Communicator / Teamspeler</td>
+                        <td class="cell-olr">OLR8</td>
+                        <td>De gegradueerde werkt constructief en actief samen in een multidisciplinair team en participeert actief tijdens overlegmomenten. De gegradueerde zoekt mee naar oplossingen om problemen te vermijden.</td>
+                    </tr>
+                    <tr>
+                        <td>Communicator / Teamspeler</td>
+                        <td class="cell-olr">OLR9</td>
+                        <td>De gegradueerde communiceert en rapporteert efficiënt over het geleverde werk, aangepast aan het doelpubliek en gebruikt hiervoor het gepaste Engelstalige vakjargon.</td>
+                    </tr>
+                    <tr>
+                        <td>Communicator / Teamspeler</td>
+                        <td class="cell-olr">OLR10</td>
+                        <td>De gegradueerde documenteert de zelf ontwikkelde applicaties op een adequate en overzichtelijke manier gebruikmakend van een kennisdatabank en volgens de afspraken binnen de organisatie. De gegradueerde geeft kwalitatieve input voor de gebruikershandleidingen, referentiegidsen en online hulpbronnen.</td>
+                    </tr>
+
+                    <tr class="row-break">
+                        <td colspan="3">Rol: Levenslang lerende IT-professional</td>
+                    </tr>
+                    <tr>
+                        <td>Levenslang lerende IT-professional</td>
+                        <td class="cell-olr">OLR11</td>
+                        <td>De gegradueerde onderhoudt zijn deskundigheidsniveau door relevante duurzame IT- en maatschappelijke ontwikkelingen actief op te volgen.</td>
+                    </tr>
+                    <tr>
+                        <td>Levenslang lerende IT-professional</td>
+                        <td class="cell-olr">OLR12</td>
+                        <td>De gegradueerde is zelfkritisch, ontwikkelt de nodige zelfkennis en gebruikt deze om zijn persoonlijke en professionele groei te bevorderen.</td>
+                    </tr>
+                    <tr>
+                        <td>Levenslang lerende IT-professional</td>
+                        <td class="cell-olr">OLR13</td>
+                        <td>De gegradueerde handelt deontologisch en duurzaam, en houdt rekening met de veiligheids- en privacyrichtlijnen.</td>
                     </tr>
                     </tbody>
                 </table>
-
-                <!-- MOBILE (NO TABLE) -->
-                <div class="lang-mobile">
-                    <div class="lang-item">
-                        <span class="lang-name">Nederlands</span>
-                        <span class="lang-level">Moedertaal</span>
-                    </div>
-                    <div class="lang-item">
-                        <span class="lang-name">Engels</span>
-                        <span class="lang-level">Zeer goed</span>
-                    </div>
-                    <div class="lang-item">
-                        <span class="lang-name">Duits</span>
-                        <span class="lang-level">Zeer goed</span>
-                    </div>
-                    <div class="lang-item">
-                        <span class="lang-name">Thais</span>
-                        <span class="lang-level">Moedertaal</span>
-                    </div>
-                </div>
-
-            </div>
-        </section>
-
-        <!-- SKILLS SECTION -->
-        <section id="skills" class="skills section">
-            <h2 class="section-title">Skills</h2>
-
-            <div class="skills-container">
-                <div class="skill">
-                    <h3>Technische kennis</h3>
-                    <ul>
-                        <li>CNC-draaien en frezen (siemens)</li>
-                        <li>Machine-instellingen: nulpunt, gereedschap instelling en offsets</li>
-                        <li>Werken met technische plannen & toleranties</li>
-                        <li>Meten en controleren</li>
-                        <li>Gereedschapsbeheer: wisselplaten, frezen, snijparameters</li>
-                        <li>Basisonderhoud machine</li>
-                        <li>Materialenkennis en verspaningsparameters</li>
-                        <li>Conventionele draaibank en freesbank</li>
-                        <li>CNC-programmering: G-code</li>
-                        <li>ERP-systemen</li>
-                        <li>Digitale meet- en logsystemen</li>
-                    </ul>
-                </div>
-
-                <div class="skill">
-                    <h3>Computerkennis</h3>
-                    <ul>
-                        <li>C#</li>
-                        <li>HTML, CSS, JavaScript</li>
-                        <li>SQL</li>
-                        <li>Git & GitHub</li>
-                        <li>Visual Studio & Visual Studio Code</li>
-                        <li>Docker</li>
-                        <li>Windows en macOS</li>
-                    </ul>
-                </div>
-
-                <div class="skill">
-                    <h3>Competenties</h3>
-                    <ul>
-                        <li>Oplossingsgericht</li>
-                        <li>Planmatig</li>
-                        <li>Zelfstandig</li>
-                        <li>Leergierig</li>
-                        <li>Team player</li>
-                        <li>Sociaal</li>
-                    </ul>
-                </div>
-            </div>
-        </section>
-
-        <!-- ERVARING SECTION -->
-        <section id="ervaring" class="experience">
-            <h2 class="section-title">Professionele ervaring</h2>
-
-            <div class="experience-list">
-                <article class="job">
-                    <header class="job-header">
-                        <div>
-                            <h3 class="job-title">CNC draaier – frezer</h3>
-                            <p class="job-company">ZF WindPower Antwerpen</p>
-                        </div>
-                        <p class="job-period">02.2005 – 02.2025</p>
-                    </header>
-
-                    <ul class="job-bullets">
-                        <li>Maken van tandwielkasten voor windmolens</li>
-                        <li>Instellen en omstellen van de machine</li>
-                        <li>Bewaken van het productieproces volgens strikte toleranties</li>
-                        <li>Lezen van technisch plan en CAM-programma's</li>
-                        <li>Gereedschapsbeheer en slijtagecontrole</li>
-                        <li>Kwaliteitscontroles op werkstuk</li>
-                    </ul>
-                </article>
-
-                <article class="job">
-                    <header class="job-header">
-                        <div>
-                            <h3 class="job-title">Draaier – frezer</h3>
-                            <p class="job-company">Smet Boring</p>
-                        </div>
-                        <p class="job-period">10.2000 – 02.2005</p>
-                    </header>
-
-                    <ul class="job-bullets">
-                        <li>Maken en herstellen van werkstukken in onderhoudsafdeling</li>
-                    </ul>
-                </article>
-
-                <article class="job">
-                    <header class="job-header">
-                        <div>
-                            <h3 class="job-title">Kernrealisaties</h3>
-                            <p class="job-company">Projectmedewerking: onderstutten Centraal Station Amsterdam</p>
-                        </div>
-                    </header>
-
-                    <ul class="job-bullets">
-                        <li>Aanpassing programma CNC-draaibank</li>
-                        <li>Vermindering productietijd met 7 min per werkstuk</li>
-                        <li>Veilig, nauwkeurig en planmatig werken</li>
-                        <li>Onderhoud en oplossen van kleine storingen</li>
-                        <li>Efficiënt samenwerken met montage team</li>
-                        <li>Kwaliteitscontrole en probleemoplossing</li>
-                    </ul>
-                </article>
-            </div>
-        </section>
-
-        <!-- CONTACT ME SECTION -->
-        <section id="contact" class="contact">
-            <h2 class="section-title">Contact me</h2>
-            <div class="address">
-                <p>Vennestraat 58 bus 102</p>
-                <p>2400 Mol</p>
-                <p>BELGIE</p>
-                <p>+32/456.55.03.85</p>
-            </div>
-        </section>
-    </main>
-
-    <!-- FOOTER-->
-    <footer class="footer">
-        <div class="footer-container">
-            <p class="footer-left">Latthakone Pathavong 1PRO-E</p>
-            <p class="footer-center">Opdracht curriculum vitae</p>
-
-            <div class="footer-right">
-                <a class="footer-button" href="mailto:Latthakone.Pathavong@student.pxl.be"><img class="footer-icon" src="images/email.png" alt="Email"></a>
-                <a class="footer-button" href="#"><img class="footer-icon" src="images/arrow_up.svg" alt="home"></a>
             </div>
         </div>
-    </footer>
 
-</div>
+    </div>
+</section>
+
+<!-- CONTACT SECTION -->
+<section id="contact" class="section contact">
+    <div class="container">
+        <h2 class="section-title">Contact</h2>
+
+        <div class="contact-box">
+            <div class="contact-item">
+                <span class="contact-label">Adres</span>
+                <p class="contact-text">
+                    Vennestraat 58 bus 102<br>
+                    2400 Mol<br>
+                    België
+                </p>
+            </div>
+
+            <div class="contact-item">
+                <span class="contact-label">Telefoon</span>
+                <a class="contact-link" href="tel:+32456550385">+32 456 55 03 85</a>
+            </div>
+
+            <div class="contact-item">
+                <span class="contact-label">E-mail</span>
+                <a class="contact-link" href="mailto:Latthakone@me.com">Latthakone@me.com</a>
+            </div>
+        </div>
+    </div>
+</section>
+
 </body>
 </html>
 

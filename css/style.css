@@ -1,558 +1,380 @@
-/* ========================================
-   RESET & BASE STYLES
-   ======================================== */
-* {
-    box-sizing: border-box;
+*{
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
 }
 
-body {
-    min-width: 360px;
-    font-family: 'Poppins', sans-serif;
-    background: #2f3032;
-    color: #8f8f8f;
-    line-height: 1.6;
+body{
+    font-family: "Space Grotesk", sans-serif;
+    background-color: #F6F1E7;
+    color: #1E1E1E;
+    font-size: 16px;
+    line-height: 1.7;
 }
 
-/* ========================================
-   CONTAINER
-   ======================================== */
-.container {
-    max-width: 1100px;
+.container{
+    width: min(1200px, 100% - 10%);
     margin: 0 auto;
 }
 
-/* ========================================
-   HEADER & NAVIGATION
-   ======================================== */
-.header-container {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 1rem 2rem;
+/* ========== NAVBAR ========== */
+header{
+    padding: 20px 0;
 }
 
-.logo {
-    font-size: 2.5rem;
-    font-weight: 700;
-    color: #8f8f8f;
-    cursor: default;
-}
-
-.gold {
-    font-size: 2rem;
-    font-weight: 600; /* Was 550 - bestaat niet */
-    color: #d4b35a;
-}
-
-.navbar ul {
+.navbar-list{
     list-style: none;
     display: flex;
-    flex-wrap: wrap;
-    gap: 0.5rem;
+    justify-content: flex-end;
+    gap: 24px;
 }
 
-.navbar a {
-    color: #8f8f8f;
+.navbar-list a{
+    font-family: "Montserrat", sans-serif;
+    color: #264653;
     text-decoration: none;
-    font-size: 1rem;
-    padding: 0.5rem 0.8rem;
-    border-radius: 4px;
-    letter-spacing: 0.03rem;
-    transition: color 0.2s ease, text-shadow 0.2s ease;
+    font-size: 14px;
+    font-weight: 600;
+    position: relative;
+    padding-bottom: 4px;
+    display: inline-block;
 }
 
-.navbar a:hover {
-    color: #b5b5b5;
-    text-shadow: 0 1px 3px #d4b35a;
+.navbar-list a:hover{
+    color: #2A9D8F;
 }
 
-/* ========================================
-   HERO SECTION
-   ======================================== */
-.hero {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 6rem;
-    padding: 4rem 2rem;
-    margin-top: 2rem;
-    margin-bottom: 8rem;
-    min-height: 70vh;
+.navbar-list a::after{
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -4px;
+    height: 2px;
+    width: 0;
+    background-color: #2A9D8F;
+    transition: width 0.25s ease;
 }
 
-.hero-container {
-    text-align: left;
-    max-width: 520px;
-}
-
-.my-image {
-    max-width: 260px;
+.navbar-list a:hover::after{
     width: 100%;
-    height: auto;
-    border-radius: 50%;
-    transition: box-shadow 0.3s ease, transform 0.3s ease;
 }
 
-.my-image:hover {
-    box-shadow: 10px 12px 24px #00000080;
-    transform: scale(1.02);
+/* ========== SECTIONS ========== */
+.section{
+    padding: 90px 0;
 }
 
-.hero-firstname {
-    font-weight: 300;
-    font-size: 3rem;
-    line-height: 1;
-    color: #a7a7a7;
-    margin: 0;
+.section-title{
+    font-family: "Orbitron", sans-serif;
+    font-size: 28px;
+    color: #264653;
+    margin-bottom: 22px;
+    position: relative;
+    display: inline-block;
+    padding-bottom: 10px;
 }
 
-.hero-lastname {
-    font-family: "Bebas Neue", sans-serif;
-    font-size: 8rem;
-    margin: 0.2rem 0 1rem;
-    color: #d4b35a;
-    text-transform: uppercase;
-    line-height: 0.9;
+.section-title::after{
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 70px;
+    height: 3px;
+    background-color: #2A9D8F;
 }
 
-.hero-subtitle {
-    color: #b5b5b5;
-    font-size: 1.2rem;
-    margin: 0;
+/* ========== HERO ========== */
+.hero{
+    padding: 180px 0;
 }
 
-/* ========================================
-   SECTIONS - GENERAL
-   ======================================== */
-.section {
-    padding: 4rem 2rem;
-    max-width: 1000px;
-    margin: 0 auto;
+.hero-firstname,
+.hero-lastname{
+    font-family: "Orbitron", sans-serif;
+    color: #264653;
+    font-weight: 700;
+    font-size: 128px;
+    line-height: 0.95;
 }
 
-.section-title,
-.about-title {
-    color: #d4b35a;
-    font-size: 3rem;
-    margin-bottom: 1.5rem;
+.hero-subtitle{
+    margin-top: 16px;
+    font-size: 20px;
+    line-height: 1.4;
+    color: #4B5A66;
+    max-width: 600px;
 }
 
-/* ========================================
-   ABOUT ME SECTION
-   ======================================== */
-.about {
-    color: #b5b5b5;
-    line-height: 1.7;
-    font-size: 1.1rem;
-    margin-bottom: 1.2rem;
+/* ========== ABOUT ========== */
+#about{
+    padding-top: 100px;
 }
 
-/* ========================================
-   EDUCATION & LANGUAGE SECTION
-   ======================================== */
-.edu-lang {
-    padding: 4rem 2rem;
-    max-width: 1000px;
-    margin: 0 auto;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 3rem;
-    align-items: start;
+.about-cards{
+    display: flex;
+    gap: 18px;
+    flex-wrap: wrap;
 }
 
-.edu-lang h2 {
-    color: #d4b35a;
-    font-size: 3rem;
-    margin: 0 0 1rem 0;
+.about-top,
+.about{
+    background-color: #EFE7DA;
+    border: 1px solid #CFC7BB;
+    border-radius: 12px;
+    padding: 16px 18px;
+    color: #4B5A66;
+    line-height: 1.75;
+    flex: 1 1 340px;
+    max-width: 70ch;
 }
 
-.edu {
-    color: #a7a7a7;
-    margin-top: 1rem;
-    margin-bottom: 0.25rem;
-    font-size: 1rem;
+.about-top{
+    border-left: 4px solid #2A9D8F;
 }
 
-.edu-p {
-    color: #b5b5b5;
-    margin: 0 0 1rem 0;
+/* ========== TABLES (LOGBOEK + OLR) ========== */
+.table-wrap{
+    overflow-x: auto;
+    border-radius: 12px;
+    border: 1px solid #CFC7BB;
+    background-color: #EFE7DA;
 }
 
-/* Language table */
-.lang-table {
+/* basis table */
+.logboek-table,
+.olr-table{
     width: 100%;
     border-collapse: collapse;
-    border-radius: 10px;
-    overflow: hidden;
+    background-color: transparent; /* wrapper doet de background */
 }
 
-.lang-table th,
-.lang-table td {
-    padding: 0.5rem 0.75rem;
+.logboek-table{ min-width: 820px; }
+.olr-table{ min-width: 900px; }
+
+/* headers */
+.logboek-table thead th,
+.olr-table thead th{
+    font-family: "Montserrat", sans-serif;
+    font-size: 13px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    color: #264653;
+    background-color: #F6F1E7;
+    border-bottom: 1px solid #CFC7BB;
+    padding: 14px;
     text-align: left;
 }
 
-.lang-table thead th {
-    background: #D4B35A1F;
-    color: #a7a7a7;
-    font-weight: 700;
-}
-
-.lang-table tbody tr:nth-child(even) {
-    background: #FFFFFF14;
-}
-
-.lang-table tbody tr:nth-child(odd) {
-    background: #FFFFFF0A;
-}
-
-.lang-table tbody td {
-    color: #b5b5b5;
-}
-
-/* Mobile language cards - hidden by default */
-.lang-mobile {
-    display: none;
-}
-
-/* ========================================
-   SKILLS SECTION
-   ======================================== */
-.skills {
-    max-width: 1100px;
-    margin: 0 auto;
-    padding: 2rem 2rem;
-}
-
-.skills-container {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 1.5rem;
-}
-
-.skill {
-    background: #FFFFFF0A;
-    border: 1px solid #FFFFFF14;
-    border-radius: 12px;
-    padding: 1.5rem;
-    box-shadow: 0 6px 12px #23212180;
-    transition: transform 0.2s ease, box-shadow 0.2s ease;
-}
-
-.skill:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 8px 16px #232121B3;
-}
-
-.skill h3 {
-    color: #a7a7a7;
-    font-size: 1.2rem;
-    margin-bottom: 1rem;
-}
-
-.skill ul {
-    list-style: none;
-}
-
-.skill li {
-    color: #b5b5b5;
+/* cells */
+.logboek-table td,
+.olr-table td{
+    border-top: 1px solid #CFC7BB;
+    padding: 14px;
+    vertical-align: top;
+    color: #4B5A66;
+    font-size: 15px;
     line-height: 1.7;
-    margin: 0.45rem 0;
-    padding-left: 1.1rem;
-    position: relative;
 }
 
-.skill li::before {
-    content: "•";
-    color: #d4b35a;
+/* week/olr kolommen */
+.cell-week{
+    font-family: "Montserrat", sans-serif;
+    font-weight: 700;
+    color: #264653;
+    width: 70px;
+}
+
+.cell-olr{
+    font-family: "Montserrat", sans-serif;
+    font-weight: 800;
+    color: #264653;
+    width: 90px;
+}
+
+/* bullets retro */
+.logboek-table ul,
+.olr-table ul{
+    list-style: none;
+    padding-left: 0;
+    margin: 8px 0 0;
+}
+
+.logboek-table li,
+.olr-table li{
+    position: relative;
+    padding-left: 14px;
+    margin-bottom: 6px;
+}
+
+.logboek-table li::before,
+.olr-table li::before{
+    content: "";
     position: absolute;
     left: 0;
+    top: 0.7em;
+    width: 6px;
+    height: 6px;
+    background-color: #2A9D8F;
+    border-radius: 2px;
 }
 
-/* ========================================
-   EXPERIENCE SECTION
-   ======================================== */
-.experience {
-    max-width: 1100px;
-    margin: 0 auto;
-    padding: 4rem 2rem;
+/* zebra alleen logboek */
+.logboek-table tbody tr:nth-child(odd):not(.row-break){
+    background-color: #EFE7DA;
+}
+.logboek-table tbody tr:nth-child(even):not(.row-break){
+    background-color: #F6F1E7;
 }
 
-.experience-list {
-    display: grid;
-    gap: 2rem;
+/* vakantie / break rows */
+.row-break td{
+    font-family: "Montserrat", sans-serif;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    background-color: #F6F1E7;
+    color: #264653;
+    padding: 12px 14px;
+    border-top: 1px solid #CFC7BB;
+    border-bottom: 1px solid #CFC7BB;
 }
 
-.job {
-    padding-bottom: 1.5rem;
-    border-bottom: 1px solid #FFFFFF14;
+/* ========== ONTWIKKELING ========== */
+.dev-block{
+    margin-top: 28px;
 }
 
-.job:last-child {
-    border-bottom: 0;
-    padding-bottom: 0;
+.dev-subtitle{
+    font-family: "Montserrat", sans-serif;
+    font-size: 14px;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    color: #264653;
+    margin-bottom: 14px;
 }
 
-.job-header {
+.qa-grid{
     display: flex;
-    justify-content: space-between;
-    align-items: baseline;
-    gap: 1rem;
-    margin-bottom: 0.8rem;
+    gap: 18px;
     flex-wrap: wrap;
 }
 
-.job-title {
-    color: #a7a7a7;
-    font-size: 1.2rem;
-    margin: 0;
+.qa-card{
+    background-color: #EFE7DA;
+    border: 1px solid #CFC7BB;
+    border-radius: 12px;
+    padding: 16px 18px;
+    flex: 1 1 340px;
 }
 
-.job-company {
-    color: #b5b5b5;
-    margin: 0.25rem 0 0;
-}
-
-.job-period {
-    color: #d4b35a;
+.qa-title{
+    font-size: 18px;
     font-weight: 700;
-    font-style: normal;
+    color: #264653;
+    margin-bottom: 8px;
 }
 
-.job-bullets {
-    list-style: none;
+.qa-text{
+    color: #4B5A66;
+    line-height: 1.75;
+    max-width: 75ch;
 }
 
-.job-bullets li {
-    color: #b5b5b5;
-    line-height: 1.7;
-    margin: 0.4rem 0;
-    padding-left: 1rem;
+/* ========== CONTACT  ========== */
+.contact-box{
+    margin-top: 14px;
+    background-color: #EFE7DA;
+    border: 1px solid #CFC7BB;
+    border-radius: 12px;
+    padding: 18px;
+}
+
+/* elke regel/onderdeel */
+.contact-item{
+    display: flex;
+    gap: 18px;
+    padding: 12px 0;
+}
+
+/* subtiele lijn tussen items */
+.contact-item + .contact-item{
+    border-top: 1px solid #CFC7BB;
+}
+
+.contact-label{
+    font-family: "Montserrat", sans-serif;
+    font-size: 13px;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    color: #264653;
+    width: 110px;          /* vaste label-kolom */
+    flex: 0 0 110px;
+}
+
+.contact-text{
+    color: #4B5A66;
+    line-height: 1.75;
+}
+
+/* link stijl (zelfde vibe als navbar underline) */
+.contact-link{
+    color: #264653;
+    text-decoration: none;
     position: relative;
+    padding-bottom: 4px;
+    display: inline-block;
 }
 
-.job-bullets li::before {
-    content: "•";
-    color: #d4b35a;
+.contact-link:hover{
+    color: #2A9D8F;
+}
+
+.contact-link::after{
+    content: "";
     position: absolute;
     left: 0;
+    bottom: -4px;
+    height: 2px;
+    width: 0;
+    background-color: #2A9D8F;
+    transition: width 0.25s ease;
 }
 
-/* ========================================
-   CONTACT SECTION
-   ======================================== */
-.contact {
-    max-width: 1100px;
-    margin: 0 auto;
-    padding: 4rem 2rem;
+.contact-link:hover::after{
+    width: 100%;
 }
 
-.address {
-    margin-top: 1rem;
-    color: #b5b5b5;
-    line-height: 1.8;
-    padding-left: 1.2rem;
-    font-style: normal;
-}
+/* Home button */
+.home{
+    position: fixed;
+    right: 32px;
+    bottom: 18px;
 
-.address p {
-    color: #b5b5b5;
-    text-decoration: none;
-    transition: color 0.2s ease;
-}
+    width: 38px;
+    height: 38px;
+    border-radius: 50%;
 
-.address p:hover {
-    color: #d4b35a;
-}
-
-/* ========================================
-   FOOTER
-   ======================================== */
-.footer {
-    border-top: 1px solid #FFFFFF14;
-    padding: 1.5rem 0;
-    margin-top: 4rem;
-}
-
-.footer-container {
-    max-width: 1100px;
-    margin: 0 auto;
-    padding: 0 2rem;
-    display: grid;
-    grid-template-columns: 1fr auto 1fr;
-    align-items: center;
-    gap: 1rem;
-}
-
-.footer-left {
-    color: #a7a7a7;
-}
-
-.footer-center {
-    color: #b5b5b5;
-    text-align: center;
-}
-
-.footer-right {
-    justify-self: end;
-    display: flex;
-    gap: 1.5rem;
-}
-
-.footer-button {
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 0.25rem;
-    border-radius: 4px;
-    transition: transform 0.2s ease;
+
+    background-color: transparent;
+    border: 1px solid rgba(38, 70, 83, 0.25);
+
+    color: #264653;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: 800;
+
+    transition: transform 0.2s ease, border-color 0.2s ease, color 0.2s ease;
 }
 
-.footer-button:hover {
-    transform: scale(1.1);
-}
-
-.footer-icon {
-    width: 30px;
-    height: 30px;
-    display: block;
-}
-
-/* ========================================
-   RESPONSIVE - SMALL TABLET (577px - 767px)
-   ======================================== */
-@media (max-width: 992px) {
-    .hero {
-        flex-direction: column;
-        gap: 2.5rem;
-        margin-top: 1rem;
-        margin-bottom: 4rem;
-        min-height: auto;
-        padding: 3rem 2rem;
-    }
-
-    .hero-container {
-        text-align: center;
-    }
-
-    .hero-lastname {
-        font-size: 5rem;
-    }
-
-    .edu-lang {
-        grid-template-columns: 1fr;
-        gap: 3rem;
-    }
-
-    .skills-container {
-        grid-template-columns: 1fr;
-    }
-}
-
-/* ========================================
-   RESPONSIVE - MOBILE (max 576px)
-   ======================================== */
-@media (max-width: 575px) {
-    /* Language: table hidden, mobile cards visible */
-    .lang-table {
-        display: none;
-    }
-
-    .lang-mobile {
-        display: grid;
-        gap: 0.75rem;
-    }
-
-    .lang-item {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        gap: 1rem;
-        padding: 0.75rem 1rem;
-        border: 1px solid #FFFFFF14;
-        background: #FFFFFF0A;
-        border-radius: 10px;
-    }
-
-    .lang-name {
-        color: #a7a7a7;
-        font-weight: 600;
-    }
-
-    .lang-level {
-        color: #b5b5b5;
-    }
-
-    /* Padding adjustments */
-    .section,
-    .skills,
-    .experience,
-    .contact,
-    .edu-lang {
-        padding: 2.5rem 1.25rem;
-    }
-
-    /* Header */
-    .header-container {
-        flex-direction: column;
-        gap: 1rem;
-        padding: 1rem 1.25rem;
-        align-items: center;
-    }
-
-    .navbar ul {
-        justify-content: center;
-    }
-
-    .navbar a {
-        padding: 0.4rem 0.6rem;
-        font-size: 0.9rem;
-    }
-
-    /* Hero */
-    .my-image {
-        max-width: 220px;
-        min-width: 160px;
-    }
-
-    .hero-firstname {
-        font-size: 2rem;
-    }
-
-    .hero-lastname {
-        font-size: 3.5rem;
-    }
-
-    .hero-subtitle {
-        font-size: 1rem;
-    }
-
-    /* Titles */
-    .about-title,
-    .section-title,
-    .edu-lang h2 {
-        font-size: 2rem;
-    }
-
-    /* Experience */
-    .job-header {
-        flex-direction: column;
-        align-items: flex-start;
-        gap: 0.3rem;
-    }
-
-    /* Footer */
-    .footer-container {
-        grid-template-columns: 1fr;
-        gap: 0.75rem;
-        text-align: center;
-    }
-
-    .footer-right {
-        justify-self: center;
-        justify-content: center;
-        gap: 1.5rem;
-    }
+.home:hover{
+    transform: translateY(-3px);
+    border-color: #2A9D8F;
+    color: #2A9D8F;
 }
