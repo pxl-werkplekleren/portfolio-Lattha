@@ -1,0 +1,306 @@
+/* HERO */
+.page-hero{
+    padding: 180px 0 120px;
+    min-height: 85vh;
+    display: flex;
+    align-items: center;
+}
+
+.page-hero-title{
+    font-family: "Orbitron", sans-serif;
+    color: #264653;
+    font-weight: 700;
+    font-size: clamp(64px, 8vw, 128px);
+    line-height: 0.95;
+    margin: 0 0 18px;
+}
+
+.page-hero-subtitle{
+    margin: 0;
+    font-size: 20px;
+    line-height: 1.55;
+    color: #4B5A66;
+    max-width: 70ch;
+}
+
+/* HERO NAV */
+.page-hero-nav{
+    margin-top: 18px;
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    flex-wrap: wrap;
+}
+
+.page-hero-nav-label{
+    font-family: "Montserrat", sans-serif;
+    font-size: 12px;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    color: #264653;
+}
+
+.page-hero-nav-list{
+    list-style: none;
+    display: flex;
+    gap: 14px;
+    padding: 0;
+    margin: 0;
+    flex-wrap: wrap;
+}
+
+.page-hero-nav-link{
+    font-family: "Montserrat", sans-serif;
+    font-size: 13px;
+    font-weight: 700;
+    color: #264653;
+    text-decoration: none;
+    position: relative;
+    padding-bottom: 4px;
+    display: inline-block;
+}
+
+.page-hero-nav-link::after{
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -4px;
+    height: 2px;
+    width: 0;
+    background-color: #2A9D8F;
+    transition: width 0.25s ease;
+}
+
+.page-hero-nav-link:hover{
+    color: #2A9D8F;
+}
+.page-hero-nav-link:hover::after{
+    width: 100%;
+}
+
+.dev-block{
+    margin-top: 26px;
+}
+
+.dev-subtitle{
+    font-family: "Montserrat", sans-serif;
+    font-size: 13px;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    color: #264653;
+    margin: 12px 0 14px;
+}
+
+/* Q&A */
+.qa-grid{
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 18px;
+    margin-top: 14px;
+}
+
+.qa-card{
+    background-color: #EFE7DA;
+    border: 1px solid #CFC7BB;
+    border-radius: 12px;
+    padding: 18px 18px;
+    position: relative;
+}
+
+.qa-card::before{
+    content: "";
+    position: absolute;
+    left: 18px;
+    top: 18px;
+    width: 8px;
+    height: 8px;
+    border-radius: 2px;
+    background-color: #2A9D8F;
+}
+
+.qa-title{
+    font-family: "Montserrat", sans-serif;
+    font-weight: 800;
+    font-size: 16px;
+    color: #264653;
+    margin: 0 0 10px;
+    padding-left: 16px;
+    line-height: 1.35;
+}
+
+.qa-text{
+    margin: 0;
+    color: #4B5A66;
+    line-height: 1.85;
+    max-width: 75ch;
+}
+
+.dev-grid{
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 18px;
+}
+
+/* cards */
+.role-card{
+    background-color: #EFE7DA;
+    border: 1px solid #CFC7BB;
+    border-radius: 12px;
+    padding: 18px;
+}
+
+/* titel rol */
+.role-title{
+    font-family: "Orbitron", sans-serif;
+    font-size: 18px;
+    color: #264653;
+    margin-bottom: 12px;
+    position: relative;
+    padding-left: 14px;
+}
+
+.role-title::before{
+    content:"";
+    position: absolute;
+    left: 0;
+    top: 0.35em;
+    width: 6px;
+    height: 6px;
+    background-color: #2A9D8F;
+    border-radius: 2px;
+}
+
+.qa{
+    margin: 0;
+}
+
+.qa dt{
+    font-family: "Montserrat", sans-serif;
+    font-size: 12px;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    color: #264653;
+    margin-top: 12px;
+}
+
+.qa dd{
+    margin: 6px 0 0;
+    color: #4B5A66;
+    line-height: 1.75;
+}
+
+.examples{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    counter-reset: ex;
+}
+
+.examples li{
+    counter-increment: ex;
+    position: relative;
+    padding-left: 28px;
+    margin: 10px 0;
+    color: #4B5A66;
+    line-height: 1.75;
+}
+
+.examples li::before{
+    content: counter(ex) ".";
+    position: absolute;
+    left: 0;
+    top: 0;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 800;
+    color: #2A9D8F;
+}
+/* ACTIVITEITEN */
+.dev-grid{
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 18px;
+    margin-top: 14px;
+}
+
+.role-card{
+    background-color: #EFE7DA;
+    border: 1px solid #CFC7BB;
+    border-radius: 12px;
+    padding: 18px;
+}
+
+.role-card .role-title{
+    margin: 0 0 10px;
+    padding-left: 14px;
+    position: relative;
+}
+
+.role-card .role-title::before{
+    content:"";
+    position: absolute;
+    left: 0;
+    top: 0.35em;
+    width: 6px;
+    height: 6px;
+    background-color: #2A9D8F;
+    border-radius: 2px;
+}
+
+/* lijst netjes leesbaar */
+.role-card .examples{
+    margin: 10px 0 0;
+    padding-left: 18px;
+    color: #4B5A66;
+    line-height: 1.85;
+}
+
+.role-card .examples li{
+    margin: 10px 0;
+}
+
+/* Responsive */
+@media (max-width: 900px){
+    .page-hero{
+        padding: 140px 0 110px;
+        min-height: 75vh;
+    }
+
+    .page-hero-subtitle{
+        font-size: 18px;
+    }
+
+    .qa-grid{
+        grid-template-columns: 1fr;
+    }
+
+    .dev-grid{
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 600px){
+    .page-hero{
+        padding: 110px 0 90px;
+        min-height: 70vh;
+    }
+
+    .page-hero-title{
+        font-size: clamp(44px, 12vw, 90px);
+    }
+
+    .page-hero-subtitle{
+        font-size: 16px;
+    }
+
+    .page-hero-nav{ gap: 10px; }
+    .page-hero-nav-list{ gap: 10px; }
+}
+
+@media (max-width: 430px){
+    .page-hero{
+        padding: 92px 0 64px;
+    }
+}

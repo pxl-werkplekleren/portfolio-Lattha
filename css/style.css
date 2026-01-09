@@ -4,6 +4,10 @@
     box-sizing: border-box;
 }
 
+html{
+    scroll-behavior: smooth;
+}
+
 body{
     font-family: "Space Grotesk", sans-serif;
     background-color: #F6F1E7;
@@ -27,6 +31,7 @@ header{
     display: flex;
     justify-content: flex-end;
     gap: 24px;
+    flex-wrap: wrap;
 }
 
 .navbar-list a{
@@ -59,32 +64,8 @@ header{
     width: 100%;
 }
 
-/* ========== SECTIONS ========== */
-.section{
-    padding: 90px 0;
-}
-
-.section-title{
-    font-family: "Orbitron", sans-serif;
-    font-size: 28px;
-    color: #264653;
-    margin-bottom: 22px;
-    position: relative;
-    display: inline-block;
-    padding-bottom: 10px;
-}
-
-.section-title::after{
-    content: "";
-    position: absolute;
-    left: 0;
-    bottom: 0;
-    width: 70px;
-    height: 3px;
-    background-color: #2A9D8F;
-}
-
 /* ========== HERO ========== */
+
 .hero{
     padding: 180px 0;
 }
@@ -133,7 +114,32 @@ header{
     border-left: 4px solid #2A9D8F;
 }
 
-/* ========== LOGBOEK ========== */
+/* ========== SECTIONS ========== */
+.section{
+    padding: 90px 0;
+}
+
+.section-title{
+    font-family: "Orbitron", sans-serif;
+    font-size: 28px;
+    color: #264653;
+    margin-bottom: 22px;
+    position: relative;
+    display: inline-block;
+    padding-bottom: 10px;
+}
+
+.section-title::after{
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 70px;
+    height: 3px;
+    background-color: #2A9D8F;
+}
+
+/* ========== TABLE ========== */
 .table-wrap{
     overflow-x: auto;
     border-radius: 12px;
@@ -141,12 +147,12 @@ header{
     background-color: #EFE7DA;
 }
 
-/* basis table */
+/* tables */
 .logboek-table,
 .olr-table{
     width: 100%;
     border-collapse: collapse;
-    background-color: transparent; /* wrapper doet de background */
+    background-color: transparent;
 }
 
 .logboek-table{ min-width: 820px; }
@@ -178,7 +184,7 @@ header{
     line-height: 1.7;
 }
 
-/* week/olr kolommen */
+/* columns */
 .cell-week{
     font-family: "Montserrat", sans-serif;
     font-weight: 700;
@@ -193,7 +199,7 @@ header{
     width: 90px;
 }
 
-/* bullets retro */
+/* bullets */
 .logboek-table ul,
 .olr-table ul{
     list-style: none;
@@ -220,7 +226,7 @@ header{
     border-radius: 2px;
 }
 
-/* zebra alleen logboek */
+/* zebra enkel logboek */
 .logboek-table tbody tr:nth-child(odd):not(.row-break){
     background-color: #EFE7DA;
 }
@@ -228,7 +234,7 @@ header{
     background-color: #F6F1E7;
 }
 
-/* vakantie / break rows */
+/* break rows */
 .row-break td{
     font-family: "Montserrat", sans-serif;
     font-weight: 800;
@@ -241,49 +247,7 @@ header{
     border-bottom: 1px solid #CFC7BB;
 }
 
-/* ========== ONTWIKKELING ========== */
-.dev-block{
-    margin-top: 28px;
-}
-
-.dev-subtitle{
-    font-family: "Montserrat", sans-serif;
-    font-size: 14px;
-    font-weight: 800;
-    text-transform: uppercase;
-    letter-spacing: 0.06em;
-    color: #264653;
-    margin-bottom: 14px;
-}
-
-.qa-grid{
-    display: flex;
-    gap: 18px;
-    flex-wrap: wrap;
-}
-
-.qa-card{
-    background-color: #EFE7DA;
-    border: 1px solid #CFC7BB;
-    border-radius: 12px;
-    padding: 16px 18px;
-    flex: 1 1 340px;
-}
-
-.qa-title{
-    font-size: 18px;
-    font-weight: 700;
-    color: #264653;
-    margin-bottom: 8px;
-}
-
-.qa-text{
-    color: #4B5A66;
-    line-height: 1.75;
-    max-width: 75ch;
-}
-
-/* ========== CONTACT  ========== */
+/* ========== CONTACT ========== */
 .contact-box{
     margin-top: 14px;
     background-color: #EFE7DA;
@@ -292,14 +256,12 @@ header{
     padding: 18px;
 }
 
-/* elke regel/onderdeel */
 .contact-item{
     display: flex;
     gap: 18px;
     padding: 12px 0;
 }
 
-/* subtiele lijn tussen items */
 .contact-item + .contact-item{
     border-top: 1px solid #CFC7BB;
 }
@@ -311,7 +273,7 @@ header{
     text-transform: uppercase;
     letter-spacing: 0.06em;
     color: #264653;
-    width: 110px;          /* vaste label-kolom */
+    width: 110px;
     flex: 0 0 110px;
 }
 
@@ -320,7 +282,6 @@ header{
     line-height: 1.75;
 }
 
-/* link stijl (zelfde vibe als navbar underline) */
 .contact-link{
     color: #264653;
     text-decoration: none;
@@ -348,7 +309,7 @@ header{
     width: 100%;
 }
 
-/* Home button */
+/* ========== STICKY HOME BUTTON ========== */
 .home{
     position: fixed;
     right: 32px;
@@ -363,9 +324,9 @@ header{
     justify-content: center;
 
     background-color: transparent;
-    border: 1px solid rgba(38, 70, 83, 0.25);
-
+    border: 1px solid #26465340;
     color: #264653;
+
     text-decoration: none;
     font-size: 18px;
     font-weight: 800;
@@ -379,18 +340,10 @@ header{
     color: #2A9D8F;
 }
 
+/* ========== RESPONSIVE ========== */
 @media (max-width: 900px){
     .container{
         width: min(1200px, 100% - 8%);
-    }
-
-    .hero{
-        padding: 140px 0;
-    }
-
-    .hero-firstname,
-    .hero-lastname{
-        font-size: clamp(64px, 10vw, 128px);
     }
 }
 
@@ -400,40 +353,12 @@ header{
     }
 
     .navbar-list{
-        flex-wrap: wrap;
+        justify-content: center;
         gap: 14px;
     }
 
     .section{
         padding: 70px 0;
-    }
-
-    #about{
-        padding-top: 80px;
-    }
-
-    .hero{
-        padding: 110px 0 90px;
-    }
-
-    .hero-subtitle{
-        font-size: 18px;
-        max-width: 100%;
-    }
-
-    .hero-firstname,
-    .hero-lastname{
-        font-size: clamp(52px, 12vw, 90px);
-    }
-
-    .about-top,
-    .about{
-        flex: 1 1 100%;
-        max-width: 100%;
-    }
-
-    .qa-card{
-        flex: 1 1 100%;
     }
 
     .contact-item{
@@ -454,42 +379,26 @@ header{
         height: 34px;
         font-size: 16px;
     }
+}
 
-    @media (max-width: 430px){
-        header{
-            padding: 16px 0;
-        }
-
-        .navbar-list{
-            justify-content: center; /* mooier op klein scherm */
-            gap: 12px;
-        }
-
-        .hero{
-            padding: 96px 0 72px;
-        }
-
-        .hero-firstname,
-        .hero-lastname{
-            font-size: clamp(44px, 14vw, 72px);
-            line-height: 0.98;
-        }
-
-        .hero-subtitle{
-            font-size: 16px;
-        }
-
-        .section-title{
-            font-size: 24px;
-        }
-
-        .home{
-            right: 14px;
-            bottom: 12px;
-            width: 32px;
-            height: 32px;
-            font-size: 15px;
-        }
+@media (max-width: 430px){
+    header{
+        padding: 16px 0;
     }
 
+    .navbar-list{
+        gap: 12px;
+    }
+
+    .section-title{
+        font-size: 24px;
+    }
+
+    .home{
+        right: 14px;
+        bottom: 12px;
+        width: 32px;
+        height: 32px;
+        font-size: 15px;
+    }
 }

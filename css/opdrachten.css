@@ -1,0 +1,175 @@
+/* OPDRACHTEN */
+
+.page-opdrachten .hero.page-hero{
+    padding: 180px 0 140px;
+    min-height: 90vh;
+    display: flex;
+    align-items: center;
+}
+
+.page-opdrachten .hero-firstname,
+.page-opdrachten .hero-lastname{
+    font-size: clamp(64px, 8vw, 128px);
+}
+
+.page-opdrachten .page-hero-subtitle{
+    margin-top: 0;
+    font-size: 20px;
+    line-height: 1.5;
+    color: #4B5A66;
+    max-width: 70ch;
+}
+
+/* Hero inhoudsnavigatie */
+.page-opdrachten .page-hero-nav{
+    margin-top: 18px;
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    flex-wrap: wrap;
+}
+
+.page-opdrachten .page-hero-nav-label{
+    font-family: "Montserrat", sans-serif;
+    font-size: 12px;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    color: #264653;
+}
+
+.page-opdrachten .page-hero-nav-list{
+    list-style: none;
+    display: flex;
+    gap: 14px;
+    padding: 0;
+    margin: 0;
+    flex-wrap: wrap;
+}
+
+.page-opdrachten .page-hero-nav-link{
+    font-family: "Montserrat", sans-serif;
+    font-size: 13px;
+    font-weight: 700;
+    color: #264653;
+    text-decoration: none;
+    position: relative;
+    padding-bottom: 4px;
+    display: inline-block;
+}
+
+.page-opdrachten .page-hero-nav-link::after{
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -4px;
+    height: 2px;
+    width: 0;
+    background-color: #2A9D8F;
+    transition: width 0.25s ease;
+}
+
+.page-opdrachten .page-hero-nav-link:hover{
+    color: #2A9D8F;
+}
+.page-opdrachten .page-hero-nav-link:hover::after{
+    width: 100%;
+}
+
+/* OPDRACHTEN */
+#opdrachten-detail .section-title{
+    margin-bottom: 18px;
+}
+
+/* Dossier */
+.opdrachten-dossier{
+    border: 1px solid #CFC7BB;
+    background-color: #EFE7DA;
+    border-radius: 12px;
+    padding: 18px;
+}
+
+/* Elke entry */
+.opdrachten-dossier .role{
+    padding: 16px 0;
+}
+.opdrachten-dossier .role + .role{
+    border-top: 1px dashed #CFC7BB;
+}
+
+/* Titel per week/opdracht */
+.opdrachten-dossier .role-title{
+    font-family: "Orbitron", sans-serif;
+    font-size: 18px;
+    color: #264653;
+    margin-bottom: 10px;
+    position: relative;
+    padding-left: 14px;
+}
+
+.opdrachten-dossier .role-title::before{
+    content:"";
+    position: absolute;
+    left: 0;
+    top: 0.35em;
+    width: 6px;
+    height: 6px;
+    background-color: #2A9D8F;
+    border-radius: 2px;
+}
+
+/* Beschrijving/Uitdaging/Bijgeleerd */
+.opdrachten-dossier .qa{
+    margin: 0;
+}
+
+.opdrachten-dossier .qa dt{
+    font-family: "Montserrat", sans-serif;
+    font-size: 12px;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    color: #264653;
+    margin-top: 10px;
+}
+
+.opdrachten-dossier .qa dd{
+    margin: 6px 0 0;
+    color: #4B5A66;
+    line-height: 1.8;
+}
+
+/* ===== Responsive ===== */
+@media (max-width: 900px){
+    .page-opdrachten .hero.page-hero{
+        padding: 140px 0 110px;
+        min-height: 80vh;
+    }
+    .page-opdrachten .page-hero-subtitle{
+        font-size: 18px;
+    }
+}
+
+@media (max-width: 600px){
+    .page-opdrachten .hero.page-hero{
+        padding: 110px 0 90px;
+        min-height: 75vh;
+    }
+
+    .page-opdrachten .page-hero-subtitle{
+        font-size: 16px;
+    }
+
+    .page-opdrachten .page-hero-nav{ gap: 10px; }
+    .page-opdrachten .page-hero-nav-list{ gap: 10px; }
+
+    .opdrachten-dossier{
+        padding: 16px;
+    }
+}
+
+@media (max-width: 430px){
+    .page-opdrachten .hero.page-hero{
+        padding: 92px 0 64px;
+    }
+}
