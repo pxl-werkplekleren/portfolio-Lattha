@@ -1,3 +1,4 @@
+/* BASE */
 *{
     margin: 0;
     padding: 0;
@@ -21,7 +22,7 @@ body{
     margin: 0 auto;
 }
 
-/* ========== NAVBAR ========== */
+/* NAVBAR */
 header{
     padding: 20px 0;
 }
@@ -64,10 +65,13 @@ header{
     width: 100%;
 }
 
-/* ========== HERO ========== */
-
+/* HERO */
 .hero{
     padding: 180px 0;
+}
+
+.hero-title{
+    display: inline-block;
 }
 
 .hero-firstname,
@@ -84,10 +88,72 @@ header{
     font-size: 20px;
     line-height: 1.4;
     color: #4B5A66;
-    max-width: 600px;
+    max-width: 70ch;
 }
 
-/* ========== ABOUT ========== */
+/* QUICKLINKS */
+.quicklinks{
+    margin-top: 22px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 22px;
+    flex-wrap: wrap;
+}
+
+.quicklink{
+    font-family: "Montserrat", sans-serif;
+    font-size: 13px;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    color: #264653;
+    text-decoration: none;
+    position: relative;
+    padding-bottom: 4px;
+    display: inline-block;
+}
+
+/* underline effect */
+.quicklink::after{
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -4px;
+    height: 2px;
+    width: 0;
+    background-color: #E9C46A;
+    transition: width 0.25s ease;
+}
+
+.quicklink:hover{
+    color: #E9C46A;
+}
+
+.quicklink:hover::after{
+    width: 100%;
+}
+
+/* kleine divider */
+.quicklinks::before{
+    content: "";
+    display: block;
+    width: 72px;
+    height: 1px;
+    background-color: #CFC7BB;
+    margin-right: 6px;
+}
+
+.quicklinks::after{
+    content: "";
+    display: block;
+    width: 72px;
+    height: 1px;
+    background-color: #CFC7BB;
+    margin-left: 6px;
+}
+
+/* ABOUT */
 #about{
     padding-top: 100px;
 }
@@ -114,7 +180,7 @@ header{
     border-left: 4px solid #2A9D8F;
 }
 
-/* ========== SECTIONS ========== */
+/* SECTIONS */
 .section{
     padding: 90px 0;
 }
@@ -139,7 +205,7 @@ header{
     background-color: #2A9D8F;
 }
 
-/* ========== TABLE ========== */
+/* TABLE */
 .table-wrap{
     overflow-x: auto;
     border-radius: 12px;
@@ -192,13 +258,6 @@ header{
     width: 70px;
 }
 
-.cell-olr{
-    font-family: "Montserrat", sans-serif;
-    font-weight: 800;
-    color: #264653;
-    width: 90px;
-}
-
 /* bullets */
 .logboek-table ul,
 .olr-table ul{
@@ -247,7 +306,7 @@ header{
     border-bottom: 1px solid #CFC7BB;
 }
 
-/* ========== CONTACT ========== */
+/* CONTACT */
 .contact-box{
     margin-top: 14px;
     background-color: #EFE7DA;
@@ -309,7 +368,7 @@ header{
     width: 100%;
 }
 
-/* ========== STICKY HOME BUTTON ========== */
+/* STICKY HOME BUTTON */
 .home{
     position: fixed;
     right: 32px;
@@ -340,10 +399,15 @@ header{
     color: #2A9D8F;
 }
 
-/* ========== RESPONSIVE ========== */
+/* RESPONSIVE */
 @media (max-width: 900px){
     .container{
         width: min(1200px, 100% - 8%);
+    }
+
+    .hero-firstname,
+    .hero-lastname{
+        font-size: clamp(56px, 10vw, 96px);
     }
 }
 
@@ -355,6 +419,14 @@ header{
     .navbar-list{
         justify-content: center;
         gap: 14px;
+    }
+
+    .hero{
+        padding: 130px 0;
+    }
+
+    .hero-subtitle{
+        font-size: 18px;
     }
 
     .section{
@@ -379,6 +451,15 @@ header{
         height: 34px;
         font-size: 16px;
     }
+
+    .quicklinks{
+        gap: 14px;
+        margin-top: 18px;
+    }
+    .quicklinks::before,
+    .quicklinks::after{
+        width: 40px;
+    }
 }
 
 @media (max-width: 430px){
@@ -400,5 +481,13 @@ header{
         width: 32px;
         height: 32px;
         font-size: 15px;
+    }
+
+    .quicklink{
+        font-size: 12px;
+    }
+    .quicklinks::before,
+    .quicklinks::after{
+        display: none;
     }
 }
