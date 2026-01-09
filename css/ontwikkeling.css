@@ -261,6 +261,42 @@
     margin: 10px 0;
 }
 
+/* Subtitels */
+.dev-subtitle{
+    font-size: clamp(16px, 1.4vw, 20px);
+    letter-spacing: 0.08em;
+    margin: 18px 0 14px;
+}
+
+/* Titels in cards */
+.role-title{
+    font-size: clamp(18px, 1.6vw, 22px);
+    margin-bottom: 12px;
+}
+
+/* Vraag-titels in Q&A cards */
+.qa-title{
+    font-size: clamp(16px, 1.3vw, 18px);
+    line-height: 1.35;
+}
+
+/* Kleine labels */
+.qa dt{
+    font-size: 13px;              /* als je dit groter wil: 14px */
+    margin-top: 14px;
+}
+
+
+.qa dd,
+.qa-text{
+    line-height: 1.9;
+}
+
+
+.section-title{
+    font-size: clamp(26px, 2vw, 32px);
+}
+
 /* Responsive */
 @media (max-width: 900px){
     .page-hero{
