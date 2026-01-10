@@ -1,4 +1,4 @@
-/* REFLECTIES */
+/* REFLECTIES.CSS */
 .page-reflecties .page-hero{
     padding: 170px 0 120px;
     min-height: 85vh;
@@ -6,34 +6,53 @@
     align-items: center;
 }
 
-/* Hero */
-.page-reflecties .hero-firstname,
-.page-reflecties .hero-lastname{
-    font-family: "Orbitron", sans-serif;
-    color: #264653;
-    font-weight: 700;
-    font-size: clamp(54px, 8vw, 120px);
-    line-height: 0.95;
-}
-
 .page-reflecties .page-hero-subtitle{
-    margin-top: 14px;
+    margin: 18px 0 0;
     font-size: 18px;
     line-height: 1.6;
     color: #4B5A66;
     max-width: 70ch;
 }
 
-/* NAV */
-.page-hero-nav{
-    margin-top: 22px;
+/* HERO NAV */
+.page-reflecties .page-hero-nav{
+    margin-top: 18px;
     display: flex;
     align-items: baseline;
     gap: 14px;
     flex-wrap: wrap;
 }
 
+/* nav lijntjes links & rechts */
+.page-hero-nav{
+    margin-top: 22px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 22px;
+    flex-wrap: wrap;
+}
+
+.page-hero-nav::before,
+.page-hero-nav::after{
+    content: "";
+    display: block;
+    width: 72px;
+    height: 1px;
+    background-color: #CFC7BB;
+}
+
 .page-hero-nav-label{
+    font-family: "Montserrat", sans-serif;
+    font-size: 13px;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    color: #264653;
+    opacity: 0.85;
+}
+
+.page-reflecties .page-hero-nav-label{
     font-family: "Montserrat", sans-serif;
     font-size: 12px;
     font-weight: 800;
@@ -43,7 +62,7 @@
     opacity: 0.85;
 }
 
-.page-hero-nav-list{
+.page-reflecties .page-hero-nav-list{
     list-style: none;
     padding: 0;
     margin: 0;
@@ -52,21 +71,22 @@
     flex-wrap: wrap;
 }
 
-.page-hero-nav-link{
+.page-reflecties .page-hero-nav-link{
     font-family: "Montserrat", sans-serif;
     font-size: 14px;
-    font-weight: 600;
+    font-weight: 700;
     color: #264653;
     text-decoration: none;
     position: relative;
     padding-bottom: 4px;
+    display: inline-block;
 }
 
-.page-hero-nav-link:hover{
+.page-reflecties .page-hero-nav-link:hover{
     color: #2A9D8F;
 }
 
-.page-hero-nav-link::after{
+.page-reflecties .page-hero-nav-link::after{
     content: "";
     position: absolute;
     left: 0;
@@ -77,68 +97,36 @@
     transition: width 0.25s ease;
 }
 
-.page-hero-nav-link:hover::after{
+.page-reflecties .page-hero-nav-link:hover::after{
     width: 100%;
 }
 
-.reflection-dossier{
+/* Dossier */
+.page-reflecties .reflection-dossier{
+    border: 1px solid #CFC7BB;
+    background-color: #EFE7DA;
+    border-radius: 12px;
+    padding: 18px;
     max-width: 980px;
 }
 
-/* cards in dossier */
-.reflection-dossier .role{
+.page-reflecties .reflection-dossier .role{
     padding: 18px 0;
 }
-
-.reflection-dossier .role + .role{
+.page-reflecties .reflection-dossier .role + .role{
     border-top: 1px dashed #CFC7BB;
 }
 
-.reflection-dossier .qa-text{
-    margin-top: 10px;
-    max-width: 75ch;
-    line-height: 1.85;
-    color: #4B5A66;
-    font-size: 16px;
-}
-
-.reflection-dossier .role-title{
-    margin-bottom: 8px;
-}
-
-/* AIM */
-.aim-readable .role-title{
-    font-size: 18px;
-}
-
-.aim-readable .qa-text{
-    font-size: 16px;
-}
-
-/* KERNKWADRANTEN */
-.kw-readable{
-    max-width: 980px;
-    display: grid;
-    gap: 14px;
-}
-
-.kw-item{
-    background-color: #F6F1E7;
-    border: 1px solid #CFC7BB;
-    border-radius: 12px;
-    padding: 16px 16px;
-}
-
-.kw-title{
+.page-reflecties .reflection-dossier .role-title{
     font-family: "Orbitron", sans-serif;
-    color: #264653;
     font-size: 18px;
-    margin: 0 0 12px;
+    color: #264653;
+    margin-bottom: 10px;
     position: relative;
     padding-left: 14px;
 }
 
-.kw-title::before{
+.page-reflecties .reflection-dossier .role-title::before{
     content:"";
     position: absolute;
     left: 0;
@@ -149,47 +137,85 @@
     border-radius: 2px;
 }
 
-.kw-dl{
+.page-reflecties .reflection-dossier .qa-text{
+    margin: 0;
+    color: #4B5A66;
+    line-height: 1.9;
+    max-width: 75ch;
+}
+
+/* Kernkwadranten */
+.page-reflecties .kw-readable{
+    max-width: 980px;
+    display: grid;
+    gap: 14px;
+}
+
+.page-reflecties .kw-item{
+    background-color: #EFE7DA;
+    border: 1px solid #CFC7BB;
+    border-radius: 12px;
+    padding: 18px;
+}
+
+.page-reflecties .kw-title{
+    font-family: "Orbitron", sans-serif;
+    color: #264653;
+    font-size: 18px;
+    margin: 0 0 12px;
+    position: relative;
+    padding-left: 14px;
+}
+
+.page-reflecties .kw-title::before{
+    content:"";
+    position: absolute;
+    left: 0;
+    top: 0.35em;
+    width: 6px;
+    height: 6px;
+    background-color: #2A9D8F;
+    border-radius: 2px;
+}
+
+.page-reflecties .kw-dl{
     margin: 0;
     display: grid;
     gap: 10px;
 }
 
-.kw-dl dt{
+.page-reflecties .kw-dl dt{
     font-family: "Montserrat", sans-serif;
-    font-size: 12px;
+    font-size: 13px;
     font-weight: 800;
     text-transform: uppercase;
-    letter-spacing: 0.08em;
+    letter-spacing: 0.06em;
     color: #264653;
     margin-top: 2px;
 }
 
-.kw-dl dd{
+.page-reflecties .kw-dl dd{
     margin: 4px 0 0;
     color: #4B5A66;
-    line-height: 1.8;
+    line-height: 1.85;
     max-width: 78ch;
 }
 
-/* X-factor */
-#xfactor .role-title{
-    font-size: 18px;
+/* Anchor spacing */
+.page-reflecties #aim,
+.page-reflecties #kernkwadranten,
+.page-reflecties #xfactor{
+    scroll-margin-top: 110px;
 }
 
-#xfactor .qa-text{
-    max-width: 75ch;
-}
-
-#aim, #kernkwadranten, #xfactor{
-    scroll-margin-top: 90px;
-}
-
-/* RESPONSIVE */
+/* Responsive */
 @media (max-width: 900px){
     .page-reflecties .page-hero{
         padding: 140px 0 100px;
         min-height: 75vh;
+    }
+    .page-reflecties .page-hero-subtitle{
+        font-size: 16px;
     }
 }
 
@@ -197,20 +223,13 @@
     .page-reflecties .page-hero{
         padding: 120px 0 90px;
     }
-
-    .page-reflecties .page-hero-subtitle{
-        font-size: 16px;
-    }
-
-    .page-hero-nav{
+    .page-reflecties .page-hero-nav{
         gap: 10px;
     }
-
-    .page-hero-nav-list{
+    .page-reflecties .page-hero-nav-list{
         gap: 12px;
     }
-
-    .kw-item{
+    .page-reflecties .kw-item{
         padding: 14px;
     }
 }
